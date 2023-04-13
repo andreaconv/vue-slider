@@ -20,8 +20,8 @@
           <img :src="images[counter]" alt="">
         </div>
 
-        <div class="btn" id="up">&uarr;</div>
-        <div class="btn" id="down">&darr;</div>
+        <div @click="button(false)" class="btn" id="up">&uarr;</div>
+        <div @click="button(true)" class="btn" id="down">&darr;</div>
 
       </div>
 

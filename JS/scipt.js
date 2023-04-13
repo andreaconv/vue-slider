@@ -12,10 +12,16 @@ createApp({
         "assets-slider/img/04.webp",
         "assets-slider/img/05.webp",
       ],
-      counter: 1,
+      counter: 0,
 
     }
+  },
 
+  methods: {
+    button(isNext){
+      if(isNext) this.counter++;
+      else this.counter--
+    }
   }
 
 }).mount('#app')
