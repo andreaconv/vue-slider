@@ -23,7 +23,7 @@
         <div class="thumb">
 
           <div class="immagini">
-            <img v-for="i in images" :src="i">
+            <img v-for="(i, index) in images" :src="i" @click="counter = index">
           </div>
 
           <div @click="button(false)" class="btn" id="up">&uarr;</div>
