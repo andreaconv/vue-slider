@@ -19,13 +19,13 @@ main{
 #app{
   width: 70%;
   height: 70%;
-  background-color: darkred;
 }
 
 .contain{
   width: 100%;
   height: 100%;
   display: flex;
+  background-color: black;
 }
 
 .image{
@@ -42,11 +42,9 @@ main{
 .thumb{
   width: 25%;
   position: relative;
-
 }
 
 .immagini{
-  background-color: aqua;
   width: 100%;
   height: 100%;
 }
@@ -54,8 +52,13 @@ main{
 .immagini img{
   height: calc(100% / 5);
   width: 100%;
-  /* height: 100%; */
   object-fit: cover;
+  display: block;
+  opacity: .7;
+}
+
+.immagini img:hover{
+  opacity: 1;
 }
 
 .btn{

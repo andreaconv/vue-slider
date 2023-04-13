@@ -17,19 +17,19 @@
       <div class="contain">
 
         <div class="image">
-          <img :src="images[counter]" alt="">
+          <img :src="images[counter]">
         </div>
         
         <div class="thumb">
+
           <div class="immagini">
-            <img src="assets-slider/img/01.webp" alt="">
-            <img src="assets-slider/img/02.webp" alt="">
-            <img src="assets-slider/img/03.webp" alt="">
-            <img src="assets-slider/img/04.webp" alt="">
-            <img src="assets-slider/img/05.webp" alt="">
+            <img v-for="i in images" :src="i">
           </div>
+
           <div @click="button(false)" class="btn" id="up">&uarr;</div>
+          
           <div @click="button(true)" class="btn" id="down">&darr;</div>
+
         </div>
 
 
