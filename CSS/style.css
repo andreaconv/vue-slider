@@ -16,7 +16,7 @@ main{
   height: 100vh;
 }
 
-.container{
+#app{
   width: 50%;
   height: 50%;
   background-color: darkred;
