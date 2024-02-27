@@ -13,7 +13,7 @@ createApp({
         "assets-slider/img/05.webp",
       ],
       counter: 0,
-
+      goAutoScroll: true,
     }
   },
 
@@ -23,8 +23,18 @@ createApp({
 
       if(this.counter === this.images.length) this.counter = 0;
       if(this.counter < 0) this.counter = this.images.length - 1;
-      console.log(this.counter)
-    }
+    },
+
+    startAutoScroll(){
+      setInterval(() => {
+        if(this.goAutoScroll) this.button(true)
+      },2000)
+    },
+    
+  },
+
+  mounted(){
+    this.startAutoScroll();
   }
 
 }).mount('#app')

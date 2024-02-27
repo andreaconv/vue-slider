@@ -21,6 +21,12 @@ main{
   height: 70%;
 }
 
+h1{
+  text-align: center;
+  margin: 10px;
+  color: white;
+}
+
 .contain{
   width: 100%;
   height: 100%;
@@ -90,4 +96,9 @@ main{
 
 .hide{
   display: none;
+}
+
+.immagini img.active{
+  border: 3px solid aqua;
+  opacity: 1;
 }

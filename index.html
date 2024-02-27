@@ -14,16 +14,26 @@
 
     <div id="app">
 
+      <!-- <h1>Lasciando il cursore sull'immagine corrente l'autoplay si interrompe</h1> -->
+
       <div class="contain">
 
+
         <div class="image">
-          <img :src="images[counter]">
+          <img
+            @mouseover="goAutoScroll = false"
+            @mouseleave="goAutoScroll = true"
+            :src="images[counter]">
         </div>
         
         <div class="thumb">
 
           <div class="immagini">
-            <img v-for="(i, index) in images" :src="i" @click="counter = index">
+            <img
+              v-for="(i, index) in images"
+              :src="i"
+              :class="{'active' : index === counter}"
+              @click="counter = index">
           </div>
 
           <div @click="button(false)" class="btn" id="up">&uarr;</div>
